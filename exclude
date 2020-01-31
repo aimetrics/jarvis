@@ -1,0 +1,4 @@
+.git/
+.gitignore
+rsync.sh
+exclude
