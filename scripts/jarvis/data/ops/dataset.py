@@ -23,7 +23,7 @@ import tensorflow as tf
 import yaml
 
 from tensorflow.python.keras.utils import generic_utils
-from jarvis.core.globals import *
+from jarvis.core.utils import *
 
 __all__ = [
     'Datasets',
@@ -131,7 +131,7 @@ class Datasets(object):
         # 1. build feature structure
         features = {}
 
-        for target in GlobalVars.target_names:
+        for target in Utils.target_names:
             features[target] = tf.io.FixedLenFeature([], tf.float32, 0)
 
         for group_id in self._group_ids:
@@ -162,11 +162,11 @@ class Datasets(object):
 
     def _parse_fn(self, record):
         parsed = tf.io.parse_single_example(record, self.features)
-        if len(GlobalVars.target_names) == 1:
-            target = parsed[GlobalVars.target_names[0]]
+        if len(Utils.target_names) == 1:
+            target = parsed[Utils.target_names[0]]
         else:
             target = {}
-            for target_name in GlobalVars.target_names:
+            for target_name in Utils.target_names:
                 target[target_name] = parsed[target_name]
 
         return parsed, target

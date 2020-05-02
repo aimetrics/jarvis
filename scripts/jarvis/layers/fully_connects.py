@@ -110,7 +110,7 @@ class FullyConnect(Layer):
         else:
             if len(inputs.get_shape()) != 2:
                 # Broadcasting is required for the inputs.
-                fc = tf.tensordot(mlp, self.kernel, [[len(input.get_shape()) - 1], [0]])
+                fc = tf.tensordot(mlp, self.kernel, [[len(mlp.get_shape()) - 1], [0]])
             else:
                 fc = tf.linalg.matmul(mlp, self.kernel)
 

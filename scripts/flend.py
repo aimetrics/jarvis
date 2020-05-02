@@ -24,7 +24,7 @@ import os
 import tensorflow as tf
 
 from jarvis.callbacks import TimeCallback
-from jarvis.core.globals import *
+from jarvis.core.utils import *
 from jarvis.data.ops.dataset import Datasets
 from jarvis.models.flend import FLEND
 from jarvis.utils.misc import gpu_info
@@ -36,7 +36,7 @@ def main(_):
     os.environ["CUDA_VISIBLE_DEVICES"] = str(flags_obj.cuda_device)
     print(gpu_info())
     group_ids = ["user"]
-    GlobalVars.target_names.append('target')
+    Utils.target_names.append('target')
 
     # 1. Fetch tfrecords dataset
     data_paths = {'train': flags_obj.train_data_path,

@@ -19,7 +19,7 @@ from __future__ import print_function
 
 import os
 from hdfs import InsecureClient
-from jarvis.core.globals import GlobalVars
+from jarvis.core.utils import Utils
 
 
 def list_files(data_source):
@@ -48,8 +48,8 @@ def list_files(data_source):
 
 
 def list(path):
-    hdfs_client = InsecureClient(GlobalVars.find_hdfs_namenode_address(),
-                                 user=GlobalVars.user)
+    hdfs_client = InsecureClient(Utils.find_hdfs_namenode_address(),
+                                 user=Utils.user)
 
     path += '/'
     relative_path = path

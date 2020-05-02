@@ -19,7 +19,7 @@ from __future__ import division
 from __future__ import print_function
 
 from absl import flags
-from jarvis.core.globals import DEFAULT_EVERY_N_ITER, DEFAULT_EPOCHS, DEFAULT_BATCH_SIZE, DEFAULT_EVAL_BATCH_SIZE
+from jarvis.core.utils import DEFAULT_EVERY_N_ITER, DEFAULT_EPOCHS, DEFAULT_BATCH_SIZE, DEFAULT_EVAL_BATCH_SIZE
 
 
 def define_flags():
