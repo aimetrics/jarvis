@@ -1,4 +1,4 @@
-Jarvis is a toolbox built on top of TensorFlow2.0 that allows developers and researchers to easily build neural networks in TensorFlow, particularly CTR models for large-scale advertising and recommendation scenarios. It provides the implementation of Meitu's FLEN model .
+Jarvis is a toolbox built on top of TensorFlow2.0 that allows developers and researchers to easily build neural networks in TensorFlow, particularly CTR models for large-scale advertising and recommendation scenarios. It provides the implementation of [Meitu's FLEN model](https://arxiv.org/abs/1911.04690).
 
 Note that Jarvis is **still actively under development**, so feedback and contributions are welcome.
 Feel free to submit your contributions as a pull request.
